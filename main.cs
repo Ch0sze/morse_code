@@ -15,6 +15,7 @@ namespace ConsoleApp1
                 vysledek = vysledek * i;
             }
             Console.WriteLine(vysledek);
+            Console.WriteLine("Tvoje máma")
         }
     }
 }
