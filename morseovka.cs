@@ -1,30 +1,31 @@
 ﻿using System;
 
-namespace morseovka { 
-    // moc to mu nechápu ale snad to nějak vysvětlím
+namespace morseovka
+{
     // tohle přidá do pole další string takže jsem to potřeboval aby se to napsalo na jednom řádku nevím jak jinak bych to udělal
     public static class Extensions
-{   // tohle dělá novej append příkaz kterej vezme existující pole přidá velikost pole +1 a hodnotu v závorce
-    public static T[] Append<T>(this T[] array, T item)
-    {
-        if (array == null)
+    {   // tohle dělá novej append příkaz kterej vezme existující pole přidá velikost pole +1 a hodnotu v závorce
+        public static T[] Append<T>(this T[] array, T item)
         {
-            return new T[] { item };
+            if (array == null)
+            {
+                return new T[] { item };
+            }
+            T[] result = new T[array.Length + 1];
+            array.CopyTo(result, 0);
+            result[array.Length] = item;
+            return result;
         }
-        T[] result = new T[array.Length + 1];
-        array.CopyTo(result, 0);
-        result[array.Length] = item;
-        return result;
     }
-}
     // tohle je ta morseova abeceda
-    public class Program
+    public class encoder
     {
-      
-        static void Main(string[] args)
+
+        public void StartEncode()
         {
             //text co se má přeložit
-            string text="QWE";
+            Console.Write("write text you want to decode:  ");
+            string text = Console.ReadLine();
             //pole do kterého se dá prelozený text
             string[] pole = new string[0];
             //převede všechny písmena na malé, kdyby byly velké tak to nepřeloží
@@ -81,8 +82,6 @@ namespace morseovka {
             }
             //vypiš všechny hodnoty v poli
             Console.WriteLine(string.Join(" ", pole));
-
-            //dodelal jsem to v 00:45 doufam že dostanu zaplaceno pane CEO
         }
     }
 }
