@@ -3,22 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 
 
-namespace ConsoleApp3
+namespace morseovka
 {
-    class dekoder
+    public class decoder
     {
-
-
-
-        static void Main(string[] args)
+        public void StartDecode()
         {
-            Console.WriteLine(Dekoduj("-|  ...-|  ---|  .---|  .|    --|  .-|  --|  .-|    .-..|  --|  .-|  ---|    -..-|  -..|    -..-|  -..|    -..-|  -..|    .----|  ..---|  ...--|"));
             Console.WriteLine("Co chceš dekódovat?:");
             string preloz = Console.ReadLine();
             Console.WriteLine(Dekoduj(preloz));
         }
 
-        public static string Dekoduj(string mkod) {
+        public static string Dekoduj(string mkod)
+        {
             string[] mvety = mkod.Split("    ");
             string prelozeno = "";
 
@@ -41,7 +38,7 @@ namespace ConsoleApp3
 
         static Dictionary<char, string> morseovka = new Dictionary<char, string>(){
 
-             
+
              {'a' , ".-|"},
              {'b' , "-...|"},
              {'c' , "-.-.|"},
