@@ -24,7 +24,7 @@ namespace morseovka
         public void StartEncode()
         {
             //text co se má přeložit
-            Console.Write("write text you want to decode:  ");
+            Console.Write("write text you want to encode:  ");
             string text = Console.ReadLine();
             //pole do kterého se dá prelozený text
             string[] pole = new string[0];

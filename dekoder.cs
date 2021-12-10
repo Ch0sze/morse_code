@@ -9,7 +9,7 @@ namespace morseovka
     {
         public void StartDecode()
         {
-            Console.WriteLine("Co chceš dekódovat?:");
+            Console.WriteLine("write morse code you want to decode:  ");
             string preloz = Console.ReadLine();
             Console.WriteLine(Dekoduj(preloz));
         }
