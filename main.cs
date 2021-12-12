@@ -22,7 +22,7 @@ namespace morseovka
                     encoder mors = new encoder();
                     mors.StartEncode();
                 }
-                //nebo jesti chcete spustit decode spustí se tenhle if:
+                //nebo jesti chcete spustit decode spustí se tenhle elseif:
                 else if (num == 2)
                 {
                     //spusteni decode programu
