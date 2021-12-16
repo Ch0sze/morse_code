@@ -27,7 +27,7 @@ namespace morseovka
                 foreach (string mpismeno in mpismena)
                 {
                     prelozenoslovo += morseovka.FirstOrDefault(x => x.Value == mpismeno).Key;
-                    // outputWord += MorseCode.Get(morseLetter); for codewars
+                    
                 }
 
                 prelozeno += (prelozeno == "") ? prelozenoslovo : " " + prelozenoslovo;
