@@ -7,6 +7,7 @@ namespace morseovka
 {
     public class Morseovka
     {
+        //ahoj
         //main se zeptá na to co chcete přeložit do morseovky a potom co chcete přeložiz z morseovky 
         static void Main(string[] args)
         {
