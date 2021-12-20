@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 
-namespace morseovka
+namespace morse
 {
     public class Morseovka
     {
@@ -13,7 +13,7 @@ namespace morseovka
             Console.WriteLine("write morse code you want to encode:  ");
             string prelozm = Console.ReadLine();
             prelozm = prelozm.ToLower();
-            Console.WriteLine(zakoduj(prelozm));
+            Console.WriteLine(Zakoduj(prelozm));
 
 
             Console.WriteLine("write morse code you want to decode:  ");
@@ -21,7 +21,7 @@ namespace morseovka
             Console.WriteLine(Dekoduj(preloz));
         }
         //zakoduj je metoda pro přeložení textu do morseovky
-        public static string zakoduj(string zkod)
+        public static string Zakoduj(string zkod)
         {
 
             var text = zkod;
@@ -39,7 +39,7 @@ namespace morseovka
         //dekoduj přeloží morseovku
         public static string Dekoduj(string mkod)
         {
-            
+
             string[] mtext = mkod.Split("    ");
             //prázdný string do kterého se bude ukládat morseovka
             string prelozeno = "";
@@ -53,7 +53,7 @@ namespace morseovka
                 foreach (string mpismeno in mslovo)
                 {
                     prelozenoslovo += morseovka.FirstOrDefault(x => x.Value == mpismeno).Key;
-                    
+
                 }
 
                 prelozeno += (prelozeno == "") ? prelozenoslovo : " " + prelozenoslovo;
@@ -62,6 +62,7 @@ namespace morseovka
             //vrátí preloženou morseovku
             return prelozeno;
         }
+
         //slovník pomocí kterého se vše překládá
         public static Dictionary<char, string> morseovka = new Dictionary<char, string>()
         {

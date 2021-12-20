@@ -12,7 +12,7 @@ namespace morse.tests
             string expected = ("-- --- .-. ... . / -.-. --- -.. . ");
             string actuall = Morseovka.Zakoduj("morse code");
             Assert.Equal(expected, actuall);
-
+            Assert.NotEmpty(actuall);
         }
 
         [Fact]
@@ -21,7 +21,9 @@ namespace morse.tests
             string expected = ("morse code");
             string actuall = Morseovka.Dekoduj("-- --- .-. ... . / -.-. --- -.. .");
             Assert.Equal(expected, actuall);
+            Assert.NotEmpty(actuall);
 
         }
     }
 }
+
